@@ -6,4 +6,6 @@ package GameContent.card;
 public class BattleCard {
     int i=0;
 
+    int g=0;
+
 }
