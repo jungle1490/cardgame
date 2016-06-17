@@ -5,12 +5,9 @@ import GameContent.action.Skill;
 /**
  * Created by joejungle on 2016/6/16.
  */
-public class Ironman extends Role  implements Skill {
-
-
+public class Uranus extends Role  implements Skill {
 
     public String Skill() {
-        return "4";
-
+        return "a";
     }
 }
