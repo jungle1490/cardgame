@@ -11,7 +11,7 @@ abstract class Card {
         return Image;
     }
 
-    public String getName() {
+    public  String getName() {
         return Name;
     }
 }

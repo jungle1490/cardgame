@@ -10,7 +10,7 @@ import GameContent.action.Skill_interface;
 //postpone
 public class FunctionCard extends Card implements Skill_interface {
 
-    int i=0;
+    FunctionCard(){}
 
     @Override
     public String Skill(BattleCard target) {

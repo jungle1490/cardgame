@@ -8,12 +8,9 @@ import GameContent.card.BattleCard;
  */
 public class Kronos extends Role  {
 
+    Kronos(){}
 
-
-    public String Skill() {
-        return "4";
-
+    public String Skill(BattleCard target1,BattleCard target2){
+        return null;
     }
-
-
 }
