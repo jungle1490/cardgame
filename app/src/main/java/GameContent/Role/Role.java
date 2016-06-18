@@ -1,22 +1,23 @@
 package GameContent.Role;
 
-import GameContent.action.Skill;
+import GameContent.action.Skill_interface;
+import GameContent.card.BattleCard;
 
 /**
  * Created by joejungle on 2016/6/16.
  */
-public class Role {
+public class Role implements Skill_interface{
 
-    String name;
-    int image;
-    int HP;
+    protected String name;
+    protected int image;
+    protected int HP;
 
-    Role(){
+    public Role(){
 
         this.HP=50;
     };
 
-    Role(String name,int image){
+    public Role(String name,int image){
         this.name=name;
         this.image=image;
         this.HP=50;
@@ -46,4 +47,14 @@ public class Role {
         this.HP = HP;
     }
 
+
+    @Override
+    public String Skill(BattleCard target) {
+        return null;
+    }
+
+    @Override
+    public String Skill(Role target) {
+        return null;
+    }
 }

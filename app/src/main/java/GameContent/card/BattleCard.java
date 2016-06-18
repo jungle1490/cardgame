@@ -1,12 +1,13 @@
 package GameContent.card;
 
+import GameContent.Role.Role;
 import GameContent.action.Attack;
 
 /**
  * Created by joejungle on 2016/6/16.
  */
 public class BattleCard extends Card implements Attack{
-    int HP; int ATK; int DEF; int Race; int round;
+    protected int HP; protected int ATK; protected int DEF; protected int Race; protected int round;
 
 
     BattleCard(int num){
@@ -35,10 +36,48 @@ public class BattleCard extends Card implements Attack{
 
     }
 
-public String Attack(){
-    String text="";
+    public int getHP() {
+        return HP;
+    }
 
-    return text;
+    public void setHP(int HP) {
+        this.HP = HP;
+    }
+
+    public int getATK() {
+        return ATK;
+    }
+
+    public void setATK(int ATK) {
+        this.ATK = ATK;
+    }
+
+    public int getDEF() {
+        return DEF;
+    }
+
+    public void setDEF(int DEF) {
+        this.DEF = DEF;
+    }
+
+
+
+
+    public String AttackCard(BattleCard enemy){
+        int damage=this.getATK()-enemy.getDEF();
+        enemy.setHP((enemy.getHP()-damage));
+        this.setHP((this.getHP()-1));
+        String text=this.getName() + "causes "+damage+" damage to"+enemy.getName();
+        return text;
 }
+
+    public String AttackRole(Role enemy){
+
+        int damage=this.getATK();
+        enemy.setHP((enemy.getHP()-damage));
+        this.setHP((this.getHP()-1));
+        String text=this.getName() + "causes "+damage+" damage to"+enemy.getName();
+        return text;
+    }
 
 }
