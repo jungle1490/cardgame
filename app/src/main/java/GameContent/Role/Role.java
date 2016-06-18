@@ -1,12 +1,13 @@
 package GameContent.Role;
 
 import GameContent.action.Skill_interface;
+import GameContent.action.Talk;
 import GameContent.card.BattleCard;
 
 /**
  * Created by joejungle on 2016/6/16.
  */
-public class Role implements Skill_interface{
+public class Role implements Skill_interface, Talk{
 
     protected String name;
     protected int image;
@@ -55,6 +56,21 @@ public class Role implements Skill_interface{
 
     @Override
     public String Skill(Role target) {
+        return null;
+    }
+
+    @Override
+    public String Talk1() {
+        return null;
+    }
+
+    @Override
+    public String Talk2() {
+        return null;
+    }
+
+    @Override
+    public String Talk3() {
         return null;
     }
 }

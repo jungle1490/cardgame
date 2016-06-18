@@ -1,6 +1,7 @@
 package GameContent.Role;
 
 
+import GameContent.action.Talk;
 import GameContent.card.BattleCard;
 
 /**

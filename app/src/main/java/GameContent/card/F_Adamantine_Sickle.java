@@ -7,7 +7,6 @@ public class F_Adamantine_Sickle extends FunctionCard {
 
     F_Adamantine_Sickle(){
         this.Name="Adamantine Sickle";
-
     }
 
     @Override
