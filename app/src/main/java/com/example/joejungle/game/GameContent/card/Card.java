@@ -1,4 +1,4 @@
-package GameContent.card;
+package com.example.joejungle.game.GameContent.card;
 
 /**
  * Created by joejungle on 2016/6/16.

@@ -1,4 +1,4 @@
-package GameContent.Role;
+package com.example.joejungle.game.GameContent.Role;
 
 
 /**

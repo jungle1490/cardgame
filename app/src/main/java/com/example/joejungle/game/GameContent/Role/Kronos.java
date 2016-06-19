@@ -1,8 +1,7 @@
-package GameContent.Role;
+package com.example.joejungle.game.GameContent.Role;
 
 
-import GameContent.action.Talk;
-import GameContent.card.BattleCard;
+import com.example.joejungle.game.GameContent.card.BattleCard;
 
 /**
  * Created by joejungle on 2016/6/16.

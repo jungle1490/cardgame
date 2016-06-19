@@ -1,4 +1,4 @@
-package GameContent.action;
+package com.example.joejungle.game.GameContent.action;
 
 /**
  * Created by joejungle on 2016/6/16.

@@ -1,8 +1,8 @@
-package GameContent.card;
+package com.example.joejungle.game.GameContent.card;
 
 
-import GameContent.Role.Role;
-import GameContent.action.Skill_interface;
+import com.example.joejungle.game.GameContent.Role.Role;
+import com.example.joejungle.game.GameContent.action.Skill_interface;
 
 /**
  * Created by joejungle on 2016/6/16.
