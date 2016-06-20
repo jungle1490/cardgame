@@ -1,6 +1,7 @@
 package com.example.joejungle.game.GameContent.Role;
 
 
+import com.example.joejungle.game.GameContent.action.Talk;
 import com.example.joejungle.game.GameContent.card.BattleCard;
 
 /**
@@ -9,10 +10,26 @@ import com.example.joejungle.game.GameContent.card.BattleCard;
 public class Kronos extends Role  {
 
     Kronos(){
+
         this.name="Kronos";
     }
 
-    public String Skill(BattleCard target1,BattleCard target2){
-        return null;
+    Kronos(String name,int image){
+        this.name = name;
+        this.image = image;
+        this.HP = 50;
+    }
+
+    @Override
+    public String Talk1(){
+        return"噗噗噗噗噗噗";
+    }
+    @Override
+    public String Talk2(){
+        return"我喜歡唱歌，你喜歡嗎";
+    }
+    @Override
+    public String Talk3(){
+        return"你要死了";
     }
 }
