@@ -2,6 +2,7 @@ package com.example.joejungle.game.ViewController.battle;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.FrameLayout;
 
 import com.example.joejungle.game.GameContent.card.BattleCard;
 import com.example.joejungle.game.GameContent.card.Card;
@@ -11,12 +12,18 @@ import com.example.joejungle.game.GameContent.card.FunctionCard;
 import com.example.joejungle.game.R;
 
 public class Battle extends AppCompatActivity {
-    private Card[] carddeck_user,carddeck_com;
+    public Card[] carddeck_user,carddeck_com;
+    private FrameLayout layoutusercard1,layoutusercard2,layoutusercard3,layoutusercard4,layoutusercard5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_battle);
+        layoutusercard1 = (FrameLayout)findViewById(R.id.ucard1);
+        layoutusercard2 = (FrameLayout)findViewById(R.id.ucard2);
+        layoutusercard3 = (FrameLayout)findViewById(R.id.ucard3);
+        layoutusercard4 = (FrameLayout)findViewById(R.id.ucard4);
+        layoutusercard5 = (FrameLayout)findViewById(R.id.ucard5);
 
 
 

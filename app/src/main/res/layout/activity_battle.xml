@@ -10,11 +10,53 @@
     tools:context="com.example.joejungle.game.ViewController.battle.Battle">
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/Attackbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:onClick="Attackbutton"
         android:text="Attack"/>
+
+    <FrameLayout
+        android:id="@+id/ucard1"
+        android:layout_width="70dp"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"></FrameLayout>
+    <FrameLayout
+        android:id="@+id/ucard2"
+        android:layout_width="70dp"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/ucard1"></FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/ucard3"
+        android:layout_width="70dp"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_toEndOf="@+id/ucard2"></FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/ucard4"
+        android:layout_width="70dp"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:layout_toEndOf="@+id/ucard3">
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/ucard5"
+        android:layout_width="70dp"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/ucard4">
+
+    </FrameLayout>
+
+
 </RelativeLayout>
