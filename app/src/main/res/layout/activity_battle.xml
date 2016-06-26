@@ -22,8 +22,7 @@
         android:id="@+id/ucard1"
         android:layout_width="70dp"
         android:layout_height="100dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"></FrameLayout>
+        android:layout_alignParentBottom="true"></FrameLayout>
     <FrameLayout
         android:id="@+id/ucard2"
         android:layout_width="70dp"
@@ -45,18 +44,14 @@
         android:layout_height="100dp"
         android:layout_alignParentBottom="true"
         android:layout_gravity="center"
-        android:layout_toEndOf="@+id/ucard3">
-
-    </FrameLayout>
+        android:layout_toEndOf="@+id/ucard3"></FrameLayout>
 
     <FrameLayout
         android:id="@+id/ucard5"
         android:layout_width="70dp"
         android:layout_height="100dp"
         android:layout_alignParentBottom="true"
-        android:layout_toEndOf="@+id/ucard4">
-
-    </FrameLayout>
+        android:layout_toEndOf="@+id/ucard4"></FrameLayout>
 
 
 </RelativeLayout>
