@@ -9,7 +9,7 @@ import com.example.joejungle.game.GameContent.card.BattleCard;
  */
 public class Kronos extends Role  {
 
-    Kronos(){
+    public Kronos(){
 
         this.name="Kronos";
     }

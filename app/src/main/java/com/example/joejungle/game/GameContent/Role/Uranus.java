@@ -6,7 +6,7 @@ package com.example.joejungle.game.GameContent.Role;
  */
 public class Uranus extends Role   {
 
-    Uranus(){
+     public Uranus(){
 
         this.name="Uranus";
     }

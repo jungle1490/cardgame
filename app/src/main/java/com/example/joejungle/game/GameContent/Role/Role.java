@@ -4,11 +4,13 @@ import com.example.joejungle.game.GameContent.action.Skill_interface;
 import com.example.joejungle.game.GameContent.action.Talk;
 import com.example.joejungle.game.GameContent.card.BattleCard;
 
+import java.io.Serializable;
+
 
 /**
  * Created by joejungle on 2016/6/16.
  */
-public class Role implements Skill_interface, Talk  {
+public class Role implements Skill_interface, Talk, Serializable {
 
     //Basic information of the role
     protected String name;
