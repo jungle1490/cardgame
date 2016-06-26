@@ -7,15 +7,11 @@ package com.example.joejungle.game.GameContent.Role;
 public class Uranus extends Role   {
 
      public Uranus(){
-
-        this.name="Uranus";
+         this.name="Uranus";
+         this.image=this.imageList.get(1);;
     }
 
-    Uranus(String name,int image){
-        this.name = name;
-        this.image = image;
-        this.HP = 50;
-    }
+
     @Override
     //this skill belongs to Uranus
     public String Skill(Role target) {

@@ -11,7 +11,12 @@ import com.example.joejungle.game.GameContent.Role.Uranus;
 import com.example.joejungle.game.R;
 import com.example.joejungle.game.ViewController.battle.Battle;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class SelectCharacter extends AppCompatActivity {
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

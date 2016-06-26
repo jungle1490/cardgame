@@ -12,6 +12,14 @@ public class Card {
         return Image;
     }
 
+    public void setName(String name) {
+        Name = name;
+    }
+
+    public void setImage(int image) {
+        Image = image;
+    }
+
     public  String getName() {
         return Name;
     }

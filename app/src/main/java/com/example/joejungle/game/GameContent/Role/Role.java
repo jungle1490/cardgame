@@ -3,8 +3,11 @@ package com.example.joejungle.game.GameContent.Role;
 import com.example.joejungle.game.GameContent.action.Skill_interface;
 import com.example.joejungle.game.GameContent.action.Talk;
 import com.example.joejungle.game.GameContent.card.BattleCard;
+import com.example.joejungle.game.R;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -18,16 +21,15 @@ public class Role implements Skill_interface, Talk, Serializable {
     protected int HP;
 
     public Role(){
+        this.HP=50;};
 
-        this.HP=50;
-    };
-
-    //user can set names and image but the HP
-    public Role(String name,int image){
-        this.name=name;
-        this.image=image;
-        this.HP=50;
-    };
+    protected List<Integer> imageList;
+    protected List<Integer> getImageList(){
+        imageList=new ArrayList<>();
+        imageList.add(R.drawable.kronus);
+        imageList.add(R.drawable.uranus);
+        return imageList;
+    }
 
     public String getName() {
         return name;

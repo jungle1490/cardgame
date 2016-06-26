@@ -10,15 +10,11 @@ import com.example.joejungle.game.GameContent.card.BattleCard;
 public class Kronos extends Role  {
 
     public Kronos(){
-
         this.name="Kronos";
+        this.image=this.imageList.get(0);
     }
 
-    Kronos(String name,int image){
-        this.name = name;
-        this.image = image;
-        this.HP = 50;
-    }
+
 
     @Override
     //this skill belongs to Kronos

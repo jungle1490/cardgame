@@ -43,6 +43,8 @@ public class Battle extends AppCompatActivity {
         return list;
     }
 
+
+
     public void setAttackButton(){
 
     }
