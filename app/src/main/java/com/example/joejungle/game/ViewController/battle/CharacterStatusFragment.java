@@ -1,6 +1,6 @@
 package com.example.joejungle.game.ViewController.battle;
 
-import android.app.Fragment;
+
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,12 +8,12 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.support.v4.app.Fragment;
 
 import com.example.joejungle.game.GameContent.Role.Role;
 import com.example.joejungle.game.GameContent.card.Card;
 import com.example.joejungle.game.R;
 
-import java.io.Serializable;
 
 /**
  * Created by Apple on 2016/6/26.
@@ -31,7 +31,7 @@ public class CharacterStatusFragment extends Fragment {
     public static CharacterStatusFragment newInstance(Card card) {
         CharacterStatusFragment fragment = new CharacterStatusFragment();
         Bundle args = new Bundle();
-        args.putSerializable("card", (Serializable) card);
+        args.putSerializable("card", card);
         fragment.setArguments(args);
         return fragment;
     }

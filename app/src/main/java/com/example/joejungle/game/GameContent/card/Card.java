@@ -1,10 +1,12 @@
 package com.example.joejungle.game.GameContent.card;
 
+import java.io.Serializable;
+
 /**
  * Created by joejungle on 2016/6/16.
  */
 //abstract class 凌駕於一般的class 上面，不能建立建構子
-public class Card {
+public class Card implements Serializable {
     protected String Name;
     protected int Image;
 
