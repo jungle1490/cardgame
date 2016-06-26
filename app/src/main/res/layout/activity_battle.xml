@@ -15,22 +15,28 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:onClick="Attackbutton"
+        android:onClick="selectcardAttack"
         android:text="Attack"/>
 
-    <FrameLayout
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true">
+
+        <FrameLayout
         android:id="@+id/ucard1"
         android:layout_width="70dp"
         android:layout_height="100dp"
         android:layout_alignParentBottom="true"></FrameLayout>
-    <FrameLayout
+        <FrameLayout
         android:id="@+id/ucard2"
         android:layout_width="70dp"
         android:layout_height="100dp"
         android:layout_alignParentBottom="true"
         android:layout_toEndOf="@+id/ucard1"></FrameLayout>
 
-    <FrameLayout
+        <FrameLayout
         android:id="@+id/ucard3"
         android:layout_width="70dp"
         android:layout_height="100dp"
@@ -38,7 +44,7 @@
         android:layout_gravity="center_horizontal|top"
         android:layout_toEndOf="@+id/ucard2"></FrameLayout>
 
-    <FrameLayout
+        <FrameLayout
         android:id="@+id/ucard4"
         android:layout_width="70dp"
         android:layout_height="100dp"
@@ -46,12 +52,20 @@
         android:layout_gravity="center"
         android:layout_toEndOf="@+id/ucard3"></FrameLayout>
 
-    <FrameLayout
+        <FrameLayout
         android:id="@+id/ucard5"
         android:layout_width="70dp"
         android:layout_height="100dp"
         android:layout_alignParentBottom="true"
         android:layout_toEndOf="@+id/ucard4"></FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="70dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"></LinearLayout>
 
 
 </RelativeLayout>

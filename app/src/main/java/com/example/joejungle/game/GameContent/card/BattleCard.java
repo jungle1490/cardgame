@@ -25,14 +25,6 @@ public class BattleCard extends Card implements Attack{
     protected int Action;
     private List<Integer> imageList;
 
-    public List<Integer> getImageList() {
-        imageList.add(R.drawable.b1);imageList.add(R.drawable.b2);imageList.add(R.drawable.b3);imageList.add(R.drawable.b4);imageList.add(R.drawable.b5);
-        imageList.add(R.drawable.b6);imageList.add(R.drawable.b7);imageList.add(R.drawable.b8);imageList.add(R.drawable.b9);imageList.add(R.drawable.b10);
-        imageList.add(R.drawable.r1);imageList.add(R.drawable.r2);imageList.add(R.drawable.r3);imageList.add(R.drawable.r4);imageList.add(R.drawable.r5);
-        imageList.add(R.drawable.r6);imageList.add(R.drawable.r7);imageList.add(R.drawable.r8);imageList.add(R.drawable.r9);imageList.add(R.drawable.r10);
-        return imageList;
-    }
-
     public BattleCard(int num){
         List<Integer> imageList = getImageList();
         switch(num){
@@ -101,6 +93,14 @@ public class BattleCard extends Card implements Attack{
 
     }
 
+    public List<Integer> getImageList() {
+        imageList.add(R.drawable.b1);imageList.add(R.drawable.b2);imageList.add(R.drawable.b3);imageList.add(R.drawable.b4);imageList.add(R.drawable.b5);
+        imageList.add(R.drawable.b6);imageList.add(R.drawable.b7);imageList.add(R.drawable.b8);imageList.add(R.drawable.b9);imageList.add(R.drawable.b10);
+        imageList.add(R.drawable.r1);imageList.add(R.drawable.r2);imageList.add(R.drawable.r3);imageList.add(R.drawable.r4);imageList.add(R.drawable.r5);
+        imageList.add(R.drawable.r6);imageList.add(R.drawable.r7);imageList.add(R.drawable.r8);imageList.add(R.drawable.r9);imageList.add(R.drawable.r10);
+        return imageList;
+    }
+
     public int getHP() {
         return HP;
     }
@@ -143,6 +143,7 @@ public class BattleCard extends Card implements Attack{
     }
 
     public String AttackCard(BattleCard enemy){
+        String text;
         //to distinguish both of the cards are same race or not.
         //if yes:
         if(this.getRace()==enemy.getRace()){
@@ -151,15 +152,18 @@ public class BattleCard extends Card implements Attack{
             //reset the HP of the card attacked.
             enemy.setHP(value_left(enemy.getHP(),damage));
 
-
             //the HP of the card attacking enemy will decrease 1 as well.
             this.setHP((this.getHP()-1));
-            String text=this.getName() + "causes "+damage+" damage to"+enemy.getName();
+            if(this.getHP()==0){
+                text = this.getName()+" is no more useful, but "+this.getName() + "causes "+damage+" damage to"+enemy.getName();;
+            }
+            else
+            text=this.getName() + "causes "+damage+" damage to"+enemy.getName();
             return text;
         }
         //if not:
         else {
-            String text="You cna only attack the Cards with same race.";
+            text="You cna only attack the Cards with same race.";
             return text;
         }
 

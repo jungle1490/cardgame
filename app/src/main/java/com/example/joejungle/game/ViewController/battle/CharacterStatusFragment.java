@@ -48,7 +48,17 @@ public class CharacterStatusFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.character_status_fragment, container, false);
         final ImageView c1 = (ImageView) view.findViewById(R.id.c1);
+        final ImageView c2 = (ImageView) view.findViewById(R.id.c2);
+        final ImageView c3 = (ImageView) view.findViewById(R.id.c3);
+        final ImageView c4 = (ImageView) view.findViewById(R.id.c4);
+        final ImageView c5 = (ImageView) view.findViewById(R.id.c5);
+
         c1.setImageResource(card.getImage());
+        c2.setImageResource(card.getImage());
+        c3.setImageResource(card.getImage());
+        c4.setImageResource(card.getImage());
+        c5.setImageResource(card.getImage());
+
 
         return view;
     }
