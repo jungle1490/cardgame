@@ -23,7 +23,7 @@ public class BattleCard extends Card implements Attack{
 
 
 
-    BattleCard(int num){
+    public BattleCard(int num){
         switch(num){
             case 1:
                 this.Name="Alpha"; this.HP=1; this.ATK=1; this.DEF=1; this.Race=(int)(Math.random()*2); this.Action=1;

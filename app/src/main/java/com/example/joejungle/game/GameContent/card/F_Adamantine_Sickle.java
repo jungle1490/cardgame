@@ -5,7 +5,7 @@ package com.example.joejungle.game.GameContent.card;
  */
 public class F_Adamantine_Sickle extends FunctionCard {
 
-    F_Adamantine_Sickle(){
+    public F_Adamantine_Sickle(){
         this.Name="Adamantine Sickle";
     }
 
