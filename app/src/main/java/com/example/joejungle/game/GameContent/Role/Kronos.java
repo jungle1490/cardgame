@@ -11,7 +11,7 @@ public class Kronos extends Role  {
 
     public Kronos(){
         this.name="Kronos";
-        this.image=this.imageList.get(0);
+        this.image=this.getImageList().get(0);
     }
 
 

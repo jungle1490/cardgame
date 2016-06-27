@@ -36,8 +36,8 @@ public class SelectCharacter extends AppCompatActivity {
 
     }
 
-    protected void UranusSelect(View view ){
-        Role role=new Uranus();
+    protected void UranusSelect(View view){
+        Uranus role=new Uranus();
         Intent intent =new Intent(this,Battle.class);
         Bundle bundle = new Bundle();
         bundle.putSerializable("role",role);

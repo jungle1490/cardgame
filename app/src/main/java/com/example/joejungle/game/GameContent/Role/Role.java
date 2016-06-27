@@ -23,7 +23,8 @@ public class Role implements Skill_interface, Talk, Serializable {
     public Role(){
         this.HP=50;};
 
-    protected List<Integer> imageList;
+    private List<Integer> imageList;
+
     protected List<Integer> getImageList(){
         imageList=new ArrayList<>();
         imageList.add(R.drawable.kronus);

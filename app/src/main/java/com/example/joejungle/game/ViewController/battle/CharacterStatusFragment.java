@@ -21,7 +21,7 @@ import com.example.joejungle.game.R;
 //Fragment 是窗格的概念，會依附在activity上。有點像是class 還有interface的關係
 public class CharacterStatusFragment extends Fragment {
 
-    private Role role;
+
     private Card card;
 
     public CharacterStatusFragment() {

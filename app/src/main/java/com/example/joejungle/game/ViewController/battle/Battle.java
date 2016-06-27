@@ -1,6 +1,5 @@
 package com.example.joejungle.game.ViewController.battle;
 
-import android.content.Intent;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
@@ -21,8 +20,12 @@ import com.example.joejungle.game.R;
 
 public class Battle extends AppCompatActivity {
     public Card[] carddeck_user,carddeck_com;
-    private Role character,mob;
-    private FrameLayout layoutusercard1,layoutusercard2,layoutusercard3,layoutusercard4,layoutusercard5;
+    private FrameLayout layoutusercard1,layoutusercard2,layoutusercard3,layoutusercard4,layoutusercard5,layoutrole;
+
+    private Role role,mob;
+    private RoleStatusFragment roleStatusFragment;
+
+
     private CharacterStatusFragment cardstatusfragment1,cardstatusfragment2,cardstatusfragment3,cardstatusfragment4,cardstatusfragment5;
     private Button btAttack;
     private TextView txview;
@@ -37,6 +40,10 @@ public class Battle extends AppCompatActivity {
         layoutusercard3 = (FrameLayout)findViewById(R.id.ucard3);
         layoutusercard4 = (FrameLayout)findViewById(R.id.ucard4);
         layoutusercard5 = (FrameLayout)findViewById(R.id.ucard5);
+
+        layoutrole=(FrameLayout) findViewById(R.id.layoutrole);
+        role=(Role)getIntent().getExtras().getSerializable("role");
+
 
         FragmentManager fManager = getSupportFragmentManager();
         FragmentTransaction ftrans = fManager.beginTransaction();
@@ -55,9 +62,11 @@ public class Battle extends AppCompatActivity {
         ftrans.replace(R.id.ucard5, cardstatusfragment5);
         ftrans.commit();
 
-        mob = new Role();
-        character = (Role) getIntent().getExtras().getSerializable("role");
 
+        ftrans = fManager.beginTransaction();
+        roleStatusFragment =RoleStatusFragment.newInstance(role);
+        ftrans.replace(R.id.layoutrole, roleStatusFragment);
+        ftrans.commit();
 
 
     }
@@ -105,13 +114,14 @@ public class Battle extends AppCompatActivity {
         }
 
         //如果其中一方失去所有的血量，遊戲結束。
-        if(mob.getHP()==0 || character.getHP()==0)
+        if(mob.getHP()==0 || role.getHP()==0)
             finish();
 
 
         }
 
     public void setAttackButton(){
+
     }
 
 

@@ -1,14 +1,17 @@
 package com.example.joejungle.game.GameContent.Role;
 
 
+import java.util.List;
+
 /**
  * Created by joejungle on 2016/6/16.
  */
 public class Uranus extends Role   {
-
+    private List<Integer> List;
      public Uranus(){
+
          this.name="Uranus";
-         this.image=this.imageList.get(1);;
+         this.image=this.getImageList().get(1);;
     }
 
 

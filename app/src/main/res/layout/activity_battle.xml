@@ -67,5 +67,13 @@
         android:layout_alignParentTop="true"
         android:orientation="horizontal"></LinearLayout>
 
+    <FrameLayout
+        android:id="@+id/layoutrole"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/Attackbutton"
+        android:layout_alignTop="@+id/Attackbutton"></FrameLayout>
+
 
 </RelativeLayout>
