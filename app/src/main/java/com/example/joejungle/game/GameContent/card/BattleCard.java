@@ -44,6 +44,7 @@ public class BattleCard extends Card implements Attack{
                     this.setImage(this.getImageList().get(0));
                 else if (Race==1)
                     this.setImage(this.getImageList().get(10));
+                break;
 
             case 2:
                 this.Name="Beta"; this.HP=2; this.ATK=1; this.DEF=1; this.Race=(int)(Math.random()*2);this.Action=1;
@@ -51,42 +52,49 @@ public class BattleCard extends Card implements Attack{
                     this.setImage(this.getImageList().get(1));
                 else if (Race==1)
                     this.setImage(this.getImageList().get(11));
+                break;
             case 3:
                 this.Name="Gamma"; this.HP=3; this.ATK=2; this.DEF=1; this.Race=(int)(Math.random()*2);this.Action=1;
                 if(Race==0)
                     this.setImage(this.getImageList().get(2));
                 else if (Race==1)
                     this.setImage(this.getImageList().get(12));
+                break;
             case 4:
                 this.Name="Delta"; this.HP=3; this.ATK=3; this.DEF=2; this.Race=(int)(Math.random()*2);this.Action=1;
                 if(Race==0)
                     this.setImage(this.getImageList().get(3));
                 else if (Race==1)
                     this.setImage(this.getImageList().get(13));
+                break;
             case 5:
                 this.Name="Epsilon"; this.HP=2; this.ATK=6; this.DEF=2; this.Race=(int)(Math.random()*2);this.Action=1;
                 if(Race==0)
                     this.setImage(this.getImageList().get(4));
                 else if (Race==1)
                     this.setImage(this.getImageList().get(14));
+                break;
             case 6:
                 this.Name="Zeta"; this.HP=4; this.ATK=4; this.DEF=4; this.Race=(int)(Math.random()*2);this.Action=1;
                 if(Race==0)
                     this.setImage(this.getImageList().get(5));
                 else if (Race==1)
                     this.setImage(this.getImageList().get(15));
+                break;
             case 7:
                 this.Name="Eta"; this.HP=6; this.ATK=2; this.DEF=6; this.Race=(int)(Math.random()*2);this.Action=1;
                 if(Race==0)
                     this.setImage(this.getImageList().get(6));
                 else if (Race==1)
                     this.setImage(this.getImageList().get(16));
+                break;
             case 8:
                 this.Name="Theta"; this.HP=6; this.ATK=0; this.DEF=10; this.Race=(int)(Math.random()*2);this.Action=1;
                 if(Race==0)
                     this.setImage(this.getImageList().get(7));
                 else if (Race==1)
                     this.setImage(this.getImageList().get(17));
+                break;
             case 9:
                 this.Name="Iota"; this.HP=7; this.ATK=11; this.DEF=0; this.Race=(int)(Math.random()*2);this.Action=1;
                 if(Race==0)
@@ -99,6 +107,10 @@ public class BattleCard extends Card implements Attack{
                     this.setImage(this.getImageList().get(9));
                 else if (Race==1)
                     this.setImage(this.getImageList().get(19));
+                break;
+            default:
+                break;
+
         }
 
     }

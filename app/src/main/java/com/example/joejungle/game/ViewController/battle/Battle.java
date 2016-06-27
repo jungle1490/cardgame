@@ -75,10 +75,10 @@ public class Battle extends AppCompatActivity {
     public Card[] getrandombcard(){
         Card[] list = new Card[5];
         for(int i =0; i<4; i++){
-            int n = (int)(Math.random()*11)+1;
+            int n = (int)((Math.random()*11)+1);
             list[i] = new BattleCard(n);
         }
-        int n = (int)(Math.random()*2)+1;
+        int n = (int)(Math.random()*2);
         if(n==1){
             list[4] = new F_Adamantine_Sickle();
         }

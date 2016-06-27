@@ -44,7 +44,7 @@ public class RoleStatusFragment extends android.support.v4.app.Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-           role= (Role) getArguments().getSerializable("role");
+           role= (Role)getArguments().getSerializable("role");
         }
     }
 
@@ -53,7 +53,7 @@ public class RoleStatusFragment extends android.support.v4.app.Fragment {
                              Bundle savedInstanceState) {
         View view= inflater.inflate(R.layout.fragment_role_status,container,false);
 
-        final ImageView ivRole=(ImageView) view.findViewById(R.id.ivRole);
+        final ImageView ivRole=(ImageView)view.findViewById(R.id.ivRole);
         ivRole.setImageResource(role.getImage());
 
         // Inflate the layout for this fragment
