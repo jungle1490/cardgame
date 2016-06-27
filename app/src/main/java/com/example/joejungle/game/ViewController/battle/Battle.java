@@ -10,18 +10,23 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
+import com.example.joejungle.game.GameContent.Role.Role;
 import com.example.joejungle.game.GameContent.card.BattleCard;
 import com.example.joejungle.game.GameContent.card.Card;
 import com.example.joejungle.game.GameContent.card.F_Adamantine_Sickle;
 import com.example.joejungle.game.GameContent.card.F_SkyFall;
 import com.example.joejungle.game.R;
 
+
+
 public class Battle extends AppCompatActivity {
     public Card[] carddeck_user,carddeck_com;
+    private Role character,mob;
     private FrameLayout layoutusercard1,layoutusercard2,layoutusercard3,layoutusercard4,layoutusercard5;
     private CharacterStatusFragment cardstatusfragment1,cardstatusfragment2,cardstatusfragment3,cardstatusfragment4,cardstatusfragment5;
     private Button btAttack;
     private TextView txview;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +54,9 @@ public class Battle extends AppCompatActivity {
         cardstatusfragment5 = CharacterStatusFragment.newInstance(carddeck_user[4]);
         ftrans.replace(R.id.ucard5, cardstatusfragment5);
         ftrans.commit();
+
+        mob = new Role();
+        character = (Role) getIntent().getExtras().getSerializable("role");
 
 
 
@@ -83,13 +91,22 @@ public class Battle extends AppCompatActivity {
             }
             if(((BattleCard) card).getHP()==0){
                 //這張卡的fragment消失
+
             }
         }
 
-        else
-            //功能卡的
+        else if (card instanceof F_Adamantine_Sickle){
+            int imageId = card.getImage();
+            String text = ((F_Adamantine_Sickle) card).Skill((BattleCard) comcard);
+            if(((BattleCard) comcard).getHP()==0){
+                comcard = carddeck_com[i++];
+            }
+            //這張卡的fragment 消失
+        }
+
         //如果其中一方失去所有的血量，遊戲結束。
-        if()
+        if(mob.getHP()==0 || character.getHP()==0)
+            finish();
 
 
         }

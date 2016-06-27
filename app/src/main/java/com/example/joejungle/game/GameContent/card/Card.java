@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  * Created by joejungle on 2016/6/16.
  */
-//abstract class 凌駕於一般的class 上面，不能建立建構子
+
 public class Card implements Serializable {
     protected String Name;
     protected int Image;
@@ -14,16 +14,16 @@ public class Card implements Serializable {
         return Image;
     }
 
-    public void setName(String name) {
-        Name = name;
-    }
-
     public void setImage(int image) {
         Image = image;
     }
 
     public  String getName() {
         return Name;
+    }
+
+    public void setName(String name) {
+        Name = name;
     }
 
     public int value_left(int origin_value, int minus_value ){

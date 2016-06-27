@@ -28,6 +28,7 @@ public class CharacterStatusFragment extends Fragment {
 
     }
 
+    //把Card丟進去就可以創建一個fragment
     public static CharacterStatusFragment newInstance(Card card) {
         CharacterStatusFragment fragment = new CharacterStatusFragment();
         Bundle args = new Bundle();
@@ -36,6 +37,7 @@ public class CharacterStatusFragment extends Fragment {
         return fragment;
     }
 
+    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
@@ -44,9 +46,10 @@ public class CharacterStatusFragment extends Fragment {
     }
 
     @Override
+    //顯示畫面
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.character_status_fragment, container, false);
+       View view = inflater.inflate(R.layout.character_status_fragment, container, false);
         final ImageView c1 = (ImageView) view.findViewById(R.id.c1);
         final ImageView c2 = (ImageView) view.findViewById(R.id.c2);
         final ImageView c3 = (ImageView) view.findViewById(R.id.c3);
